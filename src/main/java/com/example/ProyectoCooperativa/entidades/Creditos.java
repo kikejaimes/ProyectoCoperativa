@@ -20,27 +20,29 @@ public class Creditos {
     Cliente cli;
 
     @ManyToOne
-    @JoinColumn(name="codigo_Linea")
+    @JoinColumn(name="codigo")
     LineasDeCredito lc;
 
-    public Creditos(int codigo, int montoPrestado, int plazoPrestado, Date fechaDesembolso, Cliente cli, LineasDeCredito lc) {
-        this.codigo = codigo;
+    public Creditos(int codigo_Linea, int montoPrestado, int plazoPrestado, Date fechaDesembolso, Cliente cli, LineasDeCredito lc) {
+        this.codigo_Linea = codigo_Linea;
         this.montoPrestado = montoPrestado;
         this.plazoPrestado = plazoPrestado;
         this.fechaDesembolso = fechaDesembolso;
         this.cli = cli;
         this.lc = lc;
     }
+
+}
     public Creditos(){
 
     }
 
-    public int getCodigo() {
-        return codigo;
+    public int getCodigo_Linea() {
+        return codigo_Linea;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setCodigo_Linea(int codigo_Linea) {
+        this.codigo_Linea = codigo_Linea;
     }
 
     public int getMontoPrestado() {
